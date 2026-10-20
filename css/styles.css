@@ -1,0 +1,142 @@
+/* Color Palette
+# - #f4f4f9 (Light Gray Background)
+# - #2c3e50 (Dark Blue Header/Footer)
+# - #ffffff (White Section Background)
+# - #333333 (Dark Gray Text)
+*/
+
+/* Global styles 
+------------------------------------*/
+
+* { /* Added the universal box model fix snippet */
+    box-sizing: border-box; 
+}
+
+body {
+    background-color: #f4f4f9;
+    font-family: 'Open Sans', sans-serif;
+    color: #333333;
+    margin: 0; /* Ensures no white space around page edges */
+    padding: 0;
+}
+
+.content-wrap { /* Added the content-wrap selector globally */
+    max-width: 950px; 
+    margin: 0 auto;
+    padding: 50px;
+    overflow: hidden; 
+}
+
+.column-narrow { /* Added the column-narrow reusable style */
+    width: 30%;
+    float: left;
+    padding-right: 3%;
+    min-height: 175px;
+}
+
+.column-wide { /* Added the column-wide reusable style */
+    width: 70%;
+    float: left;
+    min-height: 225px;
+}
+
+.profile-img { /* Added image styling. Width, float, and margin commented out per step 6f */
+    /* width: 300px; */ 
+    /* float: left; */
+    /* margin-right: 30px; */
+    border-radius: 50%;
+}
+
+h1, h2, h3 {
+    font-family: 'Merriweather', serif;
+}
+
+h1 {
+    font-size: 3em;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 2em;
+    font-weight: 700;
+    margin-top: 0; /* Removed margin-top to normalize padding */
+}
+
+p, li, a {
+    font-size: 1.1em;
+    font-weight: 400;
+}
+
+
+/* Header & Footer 
+------------------------------------*/
+.header-section, .footer-section {
+    background-color: #2c3e50;
+    color: #ffffff;
+    padding: 50px 20px;
+    text-align: center; /* Ensures the content is centered */
+}
+
+header { /* Added top padding to header so fixed nav doesn't cover content */
+    padding-top: 80px; 
+} 
+
+nav { /* Added fixed navigation menu styling */
+    text-align: center; 
+    background: #ffffff; 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    z-index: 100; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+} 
+
+nav a { /* Added navigation link styling */
+    display: inline-block; 
+    padding: 15px 20px; 
+    text-decoration: none; 
+    text-transform: uppercase; 
+    font-weight: 700; 
+    color: #2c3e50; 
+} 
+
+header h1, header h2 { /* Removed margins specifically from h1 & h2 inside the header */
+    margin: 0;
+}
+
+.header-section p, .footer-section p, .footer-section a {
+    color: #ffffff;
+}
+
+.footer-section a {
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.contact-info a { /* Added padding and inline-block display for footer links */
+    padding: 10px;
+    display: inline-block;
+}
+
+/* Work Experience
+------------------------------------*/
+.work-section {
+    background-color: #ffffff;
+    padding: 40px;
+    margin: 30px auto;
+    max-width: 800px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Education
+------------------------------------*/
+.education-section {
+    background: linear-gradient(rgba(244, 244, 249, 0.8), rgba(244, 244, 249, 0.5)), url("../images/bg-education.jpg") no-repeat fixed; /* Replaced background-color with lecture CSS background shorthand using RGBA linear-gradient and image */
+    background-size: cover; /* Added background-size cover as demonstrated in lecture */
+    margin: 30px auto;
+    max-width: 800px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
