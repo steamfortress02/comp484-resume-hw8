@@ -134,6 +134,7 @@ header h1, header h2 { /* Removed margins specifically from h1 & h2 inside the h
 ------------------------------------*/
 .education-section {
     background: linear-gradient(rgba(244, 244, 249, 0.8), rgba(244, 244, 249, 0.5)), url("../images/bg-education.jpg") no-repeat fixed; /* Replaced background-color with lecture CSS background shorthand using RGBA linear-gradient and image */
+    padding: 40px;
     background-size: cover; /* Added background-size cover as demonstrated in lecture */
     margin: 30px auto;
     max-width: 800px;
